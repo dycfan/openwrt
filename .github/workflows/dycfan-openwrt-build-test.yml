@@ -1,8 +1,11 @@
 name: OpenWrt Firmware Compilation
 
 on:
-  schedule:
-    - cron: '0 0 * * 0' # 每周日零点零分零秒
+  push:
+    paths:
+      - 'dycfan-openwrt-build-test.yml'
+  #schedule:
+   # - cron: '0 0 * * 0' # 每周日零点零分零秒
 
 jobs:
   build:
